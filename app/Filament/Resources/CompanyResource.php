@@ -7,6 +7,7 @@ use App\Models\Company;
 use Filament\Forms\Components\Group;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -33,7 +34,7 @@ class CompanyResource extends Resource
                     Group::make()->schema([
                         TextInput::make('phone')->required(),
                         TextInput::make('email')->email()->required(),
-                    ])->columns(2),
+                    ])->columns(3),
                     Group::make()->schema([
                         TextInput::make('website')->url()->required(),
                         TextInput::make('tag_line'),

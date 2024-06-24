@@ -46,8 +46,8 @@ class UserRegisterForm extends Component implements HasForms
                     Group::make()->schema([
                         Checkbox::make('terms')->label('I agree')->required(),
                         Actions::make([
-                            Action::make('Login')->url(route('login')),
-                        ])->verticalAlignment(VerticalAlignment::End),
+                            Action::make('Login')->url(route('login'))->color('success')->link(),
+                        ])->alignEnd(),
                     ])->columns(2),
                 ]),
             ])

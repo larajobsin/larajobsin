@@ -37,8 +37,8 @@ class Login extends Component implements HasForms
                     Group::make()->schema([
                         Checkbox::make('remember_me'),
                         Actions::make([
-                            Action::make('Register')->url(route('register')),
-                        ])->verticalAlignment(VerticalAlignment::End),
+                            Action::make('Register')->url(route('register'))->color('success')->link(),
+                        ])->alignEnd(),
                     ])->columns(2),
                 ]),
             ])->statePath('data');
